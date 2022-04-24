@@ -1,31 +1,25 @@
 /**
- * @file Activity4.h
- * @author Ganesh Shenoy (ganeshshenoy999@gmail.com)
- * @brief Header file for defining activity4
+ * @file Activity1.h
+ * @author Ganesh Shenoy(ganeshshenoy999@gmail.com)
+ * @brief contains all function prototypes
  * @version 0.1
- * @date 2021-04-30
+ * @date 2021-04-28
  *
  * @copyright Copyright (c) 2021
  *
  */
-#ifndef ACTIVITY4_H_INCLUDED
-#define ACTIVITY4_H_INCLUDED
+#ifndef ACTIVITY1_H_INCLUDED
+#define ACTIVITY1_H_INCLUDED
+/**
+ * @brief function for configuring the registers
+ * @param DDRx for denoting the direction of registers (i.e input or output)
+ * @param PORTx for setting the bit at the respective register (i.e logic HIGH or logic LOW)
+ */
+void pin_config();
 
-void USARTInit(uint16_t ubrr_value);
 /**
- * @brief for receiving data
- *
+ * @brief function for determining the status of LED actuator depending on the status of both passenger seat and heater button 
+ * @return int 
  */
-char USARTReadChar();
-/**
- * @brief For transmitting data
- *
- */
-void USARTWriteChar(char data);
-/**
- * @brief For defining activity4
- *
- */
-void Activity4();
-
-#endif // ACTIVITY4_H_INCLUDED
+void Activity1();
+#endif // ACTIVITY1_H_INCLUDED
